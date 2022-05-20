@@ -62,13 +62,11 @@ contract ERC20 is IERC20 {
     }
 
     function transferFrom(address from,address to,uint256 amount) public virtual override returns (bool) {
-
         transfer(to, amount);
         return true;
     }
 
     function _mint(address account, uint256 amount) internal virtual {
-
         _totalSupply += amount;
         _balances[account] += amount;
     }
